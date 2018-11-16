@@ -1,0 +1,31 @@
+package javaapplication1;
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class JavaApplication1 {
+
+    public static void main(String[] args) {
+        
+     Scanner sc= new Scanner (System.in);
+        System.out.println("imput a Number of Rows");
+        int rows = sc.nextInt();
+        System.out.println("imput a Number of Columns");
+        int columns = sc.nextInt();
+        int [] [] ar = new int [rows] [columns];
+        
+        int i = 0;
+        int ii = 0;
+        while( i < columns){
+            System.out.println("Columns:"+1);
+            while (ii< ar.length){
+                System.out.println("(Enter number again)");
+                System.out.println("Rows:"+ ii);
+                ar [ii] [i] = sc.nextInt();
+                ii++;
+            }
+            i++;
+            ii = 0;
+    }
+        System.out.println("Your array is:" + Arrays.deepToString(ar));
+    }
+}
